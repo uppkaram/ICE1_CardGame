@@ -26,6 +26,10 @@ public class CardTrick {
            magicHand[i] = c;
            System.out.println(magicHand[i].getSuit()+""+ magicHand[i].getValue());
         }
+     //Adding a hard-coded lucky card
+       Card luckyCard = new Card();
+       luckyCard.setValue(7);
+       luckyCard.setSuit("Hearts");
         
         //insert code to ask the user for Card value and suit, 
         Scanner Keyboard = new Scanner(System.in);
@@ -56,6 +60,12 @@ public class CardTrick {
         }else
         {
             System.out.println("The magic hand does not contain your card");
+        }
+     
+      // Check if luckyCard matches the user's card
+        if (luckyCard.getValue() == userCard.getValue() && luckyCard.getSuit().equals(userCard.getSuit()))
+        {
+            System.out.println("You also have the lucky card!");
         }
     }
     
