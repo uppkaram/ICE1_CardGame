@@ -32,7 +32,7 @@ public class CardTrick {
         int value = Keyboard.nextInt();
         Keyboard.nextLine();
         System.out.println("Enter card suit Hearts, Diamonds, Spades, Clubs:-");
-        String suit = Keyboard.nextLine();
+        String suit = Keyboard.next();
         //create their card
          Card userCard = new Card();
          userCard.setValue(value);
@@ -41,7 +41,7 @@ public class CardTrick {
         boolean search = false;
         for(Card card : magicHand)
         {
-            if(card.getValue()== userCard.getValue()&& card.getSuit().equals(userCard.getSuit()));
+            if(card.getValue()== userCard.getValue()&& card.getSuit().equals(userCard.getSuit()))
             search = true;
             break;
             
